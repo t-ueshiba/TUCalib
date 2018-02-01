@@ -1,0 +1,1 @@
+../MyCanvasPaneTerse.cc

@@ -1,0 +1,141 @@
+#include "HRPcontroller.idl"
+
+struct TransformQuaternion
+{
+    float px;
+    float py;
+    float pz;
+    float qx;
+    float qy;
+    float qz;
+    float qw;
+};
+
+enum OperationalPoint {
+  EYE_OP,
+  CHEST_OP,
+  WAIST_OP,
+  RIGHTHAND_OP,
+  LEFTHAND_OP,
+  RIGHTFOOT_OP,
+  LEFTFOOT_OP,
+  COM_OP,
+  OPERATIONALPOINT_NUM
+};
+
+/**
+ * Homogeneous Matrix in Float Sequence
+ */
+typedef sequence<float> PoseMatrix;
+
+/**
+ * Sequence of Homogeneous Matrix in Float Sequence
+ */
+typedef sequence<PoseMatrix> PoseMatrixSeq;
+
+struct MotionError
+{
+  boolean BAD_JOINT;
+  boolean BAD_IK;
+};
+
+struct Flag
+{
+  short LinX;
+  short LinY;
+  short LinZ;
+  short AngX;
+  short AngY;
+  short AngZ;
+};
+
+struct CoMVelocity
+{
+  float CoMX;
+  float CoMY;
+  float CoMZ;
+};
+
+struct HandOpening
+{
+  float RHand;
+  float LHand;
+};
+
+struct FloatFlat
+{
+  float a;
+  float b;
+  float c;
+  float d;
+  float e;
+  float f;
+};
+
+struct WalkCommand
+{
+  float sx;
+  float th;
+  float dsy;
+};
+
+interface MomCplugin : OpenHRP::Plugin
+{
+
+  boolean SetUpperBodyPose(in PoseMatrix pose);
+
+  boolean PutOperationalPointPoseList(in OperationalPoint OP, in long n, in PoseMatrixSeq pose_seq);
+
+  boolean GetOperationalPointPose(in OperationalPoint OP, in long n, out PoseMatrix pose);
+
+  boolean PutPoseList(in long n, in PoseMatrixSeq pose_seq);
+
+  boolean GetPose(in long n, out PoseMatrix pose);
+
+  void getMotionError(out MotionError error);
+  
+  void setFlag(in Flag ControlFlag);
+  void setRightHandVel(in TransformQuaternion RightHandVel);
+  void setLeftHandVel(in TransformQuaternion LeftHandVel);
+  void setRightFootVel(in TransformQuaternion RightFootVel);
+  void setLeftFootVel(in TransformQuaternion LeftFootVel);
+  void setWaistVel(in TransformQuaternion WaistVel);
+  void setCoMVel(in CoMVelocity CoMVel);
+  void setHeadVel(in TransformQuaternion HeadVel);
+
+  void setRWrist_for_view();
+  void setLWrist_for_view();
+  void setViewPoint(in TransformQuaternion ViewPoint);
+  void setRWristTargetPosition(in TransformQuaternion RWristTargetPosition);
+  
+  void setHands_Opening(in HandOpening Hands);
+
+  void setReferenceFrame2World();
+  void setReferenceFrame2Vision();
+  void setReferenceFrame2OperationPoint();
+  void setReferenceFrame2Waist();
+
+  void Keep_RHand_Orientation();
+  void Free_RHand_Orientation();
+  void setGoWalkInitialPosture();
+
+  void getPlanRWristAbsPos(out TransformQuaternion PlanRWristAbsPos);
+  void getPlanLWristAbsPos(out TransformQuaternion PlanLWristAbsPos);
+  void getPlanRAnkleAbsPos(out TransformQuaternion PlanRAnkleAbsPos);
+  void getPlanLAnkleAbsPos(out TransformQuaternion PlanLAnkleAbsPos);
+  void getPlanWaistAbsPos(out TransformQuaternion PlanWaistAbsPos);
+  void getPlanCoMAbsPos(out TransformQuaternion PlanCoMAbsPos);
+
+  void getPlanHandsPos(out HandOpening PlanHands);
+
+  void setSteppingMode();
+  void setSteppingParam();
+  void StartStepping();
+
+  void StartWalkingRightFoot();
+  void StartWalkingLeftFoot();
+  void StopWalking();
+  void setWalkCommand(in WalkCommand walk);
+
+};
+
