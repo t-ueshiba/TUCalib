@@ -185,8 +185,8 @@ main(int argc, char* argv[])
     try
     {
       // V4L2カメラのオープン．
-	V4L2CameraArray	cameras;
-	cameras.restore(cameraName);
+	V4L2CameraArray	cameras(cameraName);
+	cameras.restore();
 	
 	v::MyCmdWindow<V4L2CameraArray, u_char>	myWin(vapp, cameras, params,
 						      pitch, horizontal);

@@ -192,8 +192,8 @@ main(int argc, char* argv[])
     try
     {
       // IIDCカメラのオープン．
-	IIDCCameraArray	cameras;
-	cameras.restore(cameraName, speed);
+	IIDCCameraArray	cameras(cameraName);
+	cameras.restore();
 	
 	for (int i = 0; i < cameras.size(); ++i)
 	    cerr << "camera " << i << ": uniqId = "
