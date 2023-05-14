@@ -101,7 +101,6 @@ REV		= $(shell echo $Revision: 1.5 $	|		\
 		  }')
 
 include $(PROJECT)/lib/p.mk
-include $(PROJECT)/lib/RCS.mk
 ###
 MarkerDetector.o: /Users/ueshiba/include/TU/Ransac++.h \
 	/Users/ueshiba/include/TU/types.h /Users/ueshiba/include/TU/utility.h \
