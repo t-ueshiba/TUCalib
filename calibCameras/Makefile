@@ -23,38 +23,38 @@ LINKER		= $(CCC)
 #  Macros set by mkmf	#
 #########################
 SUFFIX		= .cc:sC
-EXTHDRS		= /Users/ueshiba/include/TU/Array++.h \
-		/Users/ueshiba/include/TU/BlockMatrix++.h \
-		/Users/ueshiba/include/TU/Geometry++.h \
-		/Users/ueshiba/include/TU/Ieee1394++.h \
-		/Users/ueshiba/include/TU/Image++.cc \
-		/Users/ueshiba/include/TU/Image++.h \
-		/Users/ueshiba/include/TU/List++.h \
-		/Users/ueshiba/include/TU/Manip.h \
-		/Users/ueshiba/include/TU/Minimize++.h \
-		/Users/ueshiba/include/TU/Ransac++.h \
-		/Users/ueshiba/include/TU/Vector++.h \
-		/Users/ueshiba/include/TU/mmInstructions.h \
-		/Users/ueshiba/include/TU/types.h \
-		/Users/ueshiba/include/TU/utility.h \
-		/Users/ueshiba/include/TU/v/App.h \
-		/Users/ueshiba/include/TU/v/CanvasPane.h \
-		/Users/ueshiba/include/TU/v/CanvasPaneDC.h \
-		/Users/ueshiba/include/TU/v/CmdPane.h \
-		/Users/ueshiba/include/TU/v/CmdWindow.h \
-		/Users/ueshiba/include/TU/v/Colormap.h \
-		/Users/ueshiba/include/TU/v/Confirm.h \
-		/Users/ueshiba/include/TU/v/DC.h \
-		/Users/ueshiba/include/TU/v/Dialog.h \
-		/Users/ueshiba/include/TU/v/FileSelection.h \
-		/Users/ueshiba/include/TU/v/Menu.h \
-		/Users/ueshiba/include/TU/v/ModalDialog.h \
-		/Users/ueshiba/include/TU/v/Notify.h \
-		/Users/ueshiba/include/TU/v/ShmDC.h \
-		/Users/ueshiba/include/TU/v/TUv++.h \
-		/Users/ueshiba/include/TU/v/Timer.h \
-		/Users/ueshiba/include/TU/v/Widget-Xaw.h \
-		/Users/ueshiba/include/TU/v/XDC.h
+EXTHDRS		= /usr/local/include/TU/Array++.h \
+		/usr/local/include/TU/Camera++.h \
+		/usr/local/include/TU/Geometry++.h \
+		/usr/local/include/TU/Image++.h \
+		/usr/local/include/TU/List.h \
+		/usr/local/include/TU/Manip.h \
+		/usr/local/include/TU/Minimize.h \
+		/usr/local/include/TU/Vector++.h \
+		/usr/local/include/TU/algorithm.h \
+		/usr/local/include/TU/iterator.h \
+		/usr/local/include/TU/pair.h \
+		/usr/local/include/TU/range.h \
+		/usr/local/include/TU/tuple.h \
+		/usr/local/include/TU/type_traits.h \
+		/usr/local/include/TU/v/App.h \
+		/usr/local/include/TU/v/CanvasPane.h \
+		/usr/local/include/TU/v/CanvasPaneDC.h \
+		/usr/local/include/TU/v/CmdPane.h \
+		/usr/local/include/TU/v/CmdWindow.h \
+		/usr/local/include/TU/v/Colormap.h \
+		/usr/local/include/TU/v/Confirm.h \
+		/usr/local/include/TU/v/DC.h \
+		/usr/local/include/TU/v/Dialog.h \
+		/usr/local/include/TU/v/FileSelection.h \
+		/usr/local/include/TU/v/Menu.h \
+		/usr/local/include/TU/v/ModalDialog.h \
+		/usr/local/include/TU/v/Notify.h \
+		/usr/local/include/TU/v/ShmDC.h \
+		/usr/local/include/TU/v/TUv++.h \
+		/usr/local/include/TU/v/Timer.h \
+		/usr/local/include/TU/v/Widget-Xaw.h \
+		/usr/local/include/TU/v/XDC.h
 HDRS		= MarkerDetector.h \
 		MyCanvasPane.h \
 		MyCanvasPaneTerse.h \
@@ -102,163 +102,138 @@ REV		= $(shell echo $Revision: 1.5 $	|		\
 
 include $(PROJECT)/lib/p.mk
 ###
-MarkerDetector.o: /Users/ueshiba/include/TU/Ransac++.h \
-	/Users/ueshiba/include/TU/types.h /Users/ueshiba/include/TU/utility.h \
-	MarkerDetector.h /Users/ueshiba/include/TU/Image++.h \
-	/Users/ueshiba/include/TU/Geometry++.h \
-	/Users/ueshiba/include/TU/Minimize++.h \
-	/Users/ueshiba/include/TU/Vector++.h \
-	/Users/ueshiba/include/TU/Array++.h ProjectiveMappingWithDistortion.h \
-	debug.h
-MyCanvasPane.o: MyCanvasPane.h /Users/ueshiba/include/TU/v/CanvasPane.h \
-	/Users/ueshiba/include/TU/v/TUv++.h \
-	/Users/ueshiba/include/TU/v/Colormap.h \
-	/Users/ueshiba/include/TU/Image++.h \
-	/Users/ueshiba/include/TU/Geometry++.h \
-	/Users/ueshiba/include/TU/utility.h \
-	/Users/ueshiba/include/TU/Minimize++.h \
-	/Users/ueshiba/include/TU/Vector++.h \
-	/Users/ueshiba/include/TU/Array++.h /Users/ueshiba/include/TU/types.h \
-	/Users/ueshiba/include/TU/List++.h \
-	/Users/ueshiba/include/TU/v/Widget-Xaw.h \
-	/Users/ueshiba/include/TU/v/CanvasPaneDC.h \
-	/Users/ueshiba/include/TU/v/XDC.h /Users/ueshiba/include/TU/v/DC.h \
-	/Users/ueshiba/include/TU/Manip.h /Users/ueshiba/include/TU/v/Menu.h \
-	/Users/ueshiba/include/TU/v/ShmDC.h MarkerDetector.h \
-	ProjectiveMappingWithDistortion.h
+MarkerDetector.o: MarkerDetector.h /usr/local/include/TU/Image++.h \
+	/usr/local/include/TU/pair.h /usr/local/include/TU/type_traits.h \
+	/usr/local/include/TU/Manip.h /usr/local/include/TU/Camera++.h \
+	/usr/local/include/TU/Geometry++.h /usr/local/include/TU/Minimize.h \
+	/usr/local/include/TU/Vector++.h /usr/local/include/TU/Array++.h \
+	/usr/local/include/TU/range.h /usr/local/include/TU/iterator.h \
+	/usr/local/include/TU/tuple.h /usr/local/include/TU/algorithm.h \
+	ProjectiveMappingWithDistortion.h debug.h
+MyCanvasPane.o: MyCanvasPane.h /usr/local/include/TU/v/CanvasPane.h \
+	/usr/local/include/TU/v/TUv++.h /usr/local/include/TU/List.h \
+	/usr/local/include/TU/Geometry++.h /usr/local/include/TU/Minimize.h \
+	/usr/local/include/TU/Vector++.h /usr/local/include/TU/Array++.h \
+	/usr/local/include/TU/range.h /usr/local/include/TU/iterator.h \
+	/usr/local/include/TU/tuple.h /usr/local/include/TU/type_traits.h \
+	/usr/local/include/TU/algorithm.h \
+	/usr/local/include/TU/v/Widget-Xaw.h \
+	/usr/local/include/TU/v/CanvasPaneDC.h /usr/local/include/TU/v/XDC.h \
+	/usr/local/include/TU/v/DC.h /usr/local/include/TU/Image++.h \
+	/usr/local/include/TU/pair.h /usr/local/include/TU/Manip.h \
+	/usr/local/include/TU/Camera++.h /usr/local/include/TU/v/Colormap.h \
+	/usr/local/include/TU/v/Menu.h /usr/local/include/TU/v/ShmDC.h \
+	MarkerDetector.h ProjectiveMappingWithDistortion.h
 MyCanvasPaneTerse.o: MyCanvasPaneTerse.h MyCanvasPane.h \
-	/Users/ueshiba/include/TU/v/CanvasPane.h \
-	/Users/ueshiba/include/TU/v/TUv++.h \
-	/Users/ueshiba/include/TU/v/Colormap.h \
-	/Users/ueshiba/include/TU/Image++.h \
-	/Users/ueshiba/include/TU/Geometry++.h \
-	/Users/ueshiba/include/TU/utility.h \
-	/Users/ueshiba/include/TU/Minimize++.h \
-	/Users/ueshiba/include/TU/Vector++.h \
-	/Users/ueshiba/include/TU/Array++.h /Users/ueshiba/include/TU/types.h \
-	/Users/ueshiba/include/TU/List++.h \
-	/Users/ueshiba/include/TU/v/Widget-Xaw.h \
-	/Users/ueshiba/include/TU/v/CanvasPaneDC.h \
-	/Users/ueshiba/include/TU/v/XDC.h /Users/ueshiba/include/TU/v/DC.h \
-	/Users/ueshiba/include/TU/Manip.h /Users/ueshiba/include/TU/v/Menu.h \
-	/Users/ueshiba/include/TU/v/ShmDC.h MarkerDetector.h \
-	ProjectiveMappingWithDistortion.h
-MyCmdWindow.o: MyCmdWindow.h /Users/ueshiba/include/TU/v/App.h \
-	/Users/ueshiba/include/TU/v/TUv++.h \
-	/Users/ueshiba/include/TU/v/Colormap.h \
-	/Users/ueshiba/include/TU/Image++.h \
-	/Users/ueshiba/include/TU/Geometry++.h \
-	/Users/ueshiba/include/TU/utility.h \
-	/Users/ueshiba/include/TU/Minimize++.h \
-	/Users/ueshiba/include/TU/Vector++.h \
-	/Users/ueshiba/include/TU/Array++.h /Users/ueshiba/include/TU/types.h \
-	/Users/ueshiba/include/TU/List++.h \
-	/Users/ueshiba/include/TU/v/Widget-Xaw.h \
-	/Users/ueshiba/include/TU/v/CmdWindow.h \
-	/Users/ueshiba/include/TU/v/CmdPane.h \
-	/Users/ueshiba/include/TU/v/FileSelection.h \
-	/Users/ueshiba/include/TU/v/ModalDialog.h \
-	/Users/ueshiba/include/TU/v/Dialog.h \
-	/Users/ueshiba/include/TU/v/Timer.h MyCanvasPaneTerse.h \
-	MyCanvasPane.h /Users/ueshiba/include/TU/v/CanvasPane.h \
-	/Users/ueshiba/include/TU/v/CanvasPaneDC.h \
-	/Users/ueshiba/include/TU/v/XDC.h /Users/ueshiba/include/TU/v/DC.h \
-	/Users/ueshiba/include/TU/Manip.h /Users/ueshiba/include/TU/v/Menu.h \
-	/Users/ueshiba/include/TU/v/ShmDC.h MarkerDetector.h \
+	/usr/local/include/TU/v/CanvasPane.h /usr/local/include/TU/v/TUv++.h \
+	/usr/local/include/TU/List.h /usr/local/include/TU/Geometry++.h \
+	/usr/local/include/TU/Minimize.h /usr/local/include/TU/Vector++.h \
+	/usr/local/include/TU/Array++.h /usr/local/include/TU/range.h \
+	/usr/local/include/TU/iterator.h /usr/local/include/TU/tuple.h \
+	/usr/local/include/TU/type_traits.h /usr/local/include/TU/algorithm.h \
+	/usr/local/include/TU/v/Widget-Xaw.h \
+	/usr/local/include/TU/v/CanvasPaneDC.h /usr/local/include/TU/v/XDC.h \
+	/usr/local/include/TU/v/DC.h /usr/local/include/TU/Image++.h \
+	/usr/local/include/TU/pair.h /usr/local/include/TU/Manip.h \
+	/usr/local/include/TU/Camera++.h /usr/local/include/TU/v/Colormap.h \
+	/usr/local/include/TU/v/Menu.h /usr/local/include/TU/v/ShmDC.h \
+	MarkerDetector.h ProjectiveMappingWithDistortion.h
+MyCmdWindow.o: MyCmdWindow.h /usr/local/include/TU/v/App.h \
+	/usr/local/include/TU/v/TUv++.h /usr/local/include/TU/List.h \
+	/usr/local/include/TU/Geometry++.h /usr/local/include/TU/Minimize.h \
+	/usr/local/include/TU/Vector++.h /usr/local/include/TU/Array++.h \
+	/usr/local/include/TU/range.h /usr/local/include/TU/iterator.h \
+	/usr/local/include/TU/tuple.h /usr/local/include/TU/type_traits.h \
+	/usr/local/include/TU/algorithm.h \
+	/usr/local/include/TU/v/Widget-Xaw.h \
+	/usr/local/include/TU/v/Colormap.h /usr/local/include/TU/Image++.h \
+	/usr/local/include/TU/pair.h /usr/local/include/TU/Manip.h \
+	/usr/local/include/TU/Camera++.h /usr/local/include/TU/v/CmdWindow.h \
+	/usr/local/include/TU/v/CmdPane.h \
+	/usr/local/include/TU/v/FileSelection.h \
+	/usr/local/include/TU/v/ModalDialog.h \
+	/usr/local/include/TU/v/Dialog.h /usr/local/include/TU/v/Timer.h \
+	MyCanvasPaneTerse.h MyCanvasPane.h \
+	/usr/local/include/TU/v/CanvasPane.h \
+	/usr/local/include/TU/v/CanvasPaneDC.h /usr/local/include/TU/v/XDC.h \
+	/usr/local/include/TU/v/DC.h /usr/local/include/TU/v/Menu.h \
+	/usr/local/include/TU/v/ShmDC.h MarkerDetector.h \
 	ProjectiveMappingWithDistortion.h calibCameras.h \
-	/Users/ueshiba/include/TU/Ieee1394++.h \
-	/Users/ueshiba/include/TU/v/Confirm.h \
-	/Users/ueshiba/include/TU/v/Notify.h
-MyModalDialog.o: MyModalDialog.h /Users/ueshiba/include/TU/v/ModalDialog.h \
-	/Users/ueshiba/include/TU/v/Dialog.h \
-	/Users/ueshiba/include/TU/v/CmdPane.h \
-	/Users/ueshiba/include/TU/v/CmdWindow.h \
-	/Users/ueshiba/include/TU/v/TUv++.h \
-	/Users/ueshiba/include/TU/v/Colormap.h \
-	/Users/ueshiba/include/TU/Image++.h \
-	/Users/ueshiba/include/TU/Geometry++.h \
-	/Users/ueshiba/include/TU/utility.h \
-	/Users/ueshiba/include/TU/Minimize++.h \
-	/Users/ueshiba/include/TU/Vector++.h \
-	/Users/ueshiba/include/TU/Array++.h /Users/ueshiba/include/TU/types.h \
-	/Users/ueshiba/include/TU/List++.h \
-	/Users/ueshiba/include/TU/v/Widget-Xaw.h
-calibCamerasWithPlanes.o: /Users/ueshiba/include/TU/utility.h \
-	MarkerDetector.h /Users/ueshiba/include/TU/Image++.h \
-	/Users/ueshiba/include/TU/Geometry++.h \
-	/Users/ueshiba/include/TU/Minimize++.h \
-	/Users/ueshiba/include/TU/Vector++.h \
-	/Users/ueshiba/include/TU/Array++.h /Users/ueshiba/include/TU/types.h \
+	/usr/local/include/TU/v/Confirm.h /usr/local/include/TU/v/Notify.h
+MyModalDialog.o: MyModalDialog.h /usr/local/include/TU/v/ModalDialog.h \
+	/usr/local/include/TU/v/Dialog.h /usr/local/include/TU/v/CmdPane.h \
+	/usr/local/include/TU/v/CmdWindow.h /usr/local/include/TU/v/TUv++.h \
+	/usr/local/include/TU/List.h /usr/local/include/TU/Geometry++.h \
+	/usr/local/include/TU/Minimize.h /usr/local/include/TU/Vector++.h \
+	/usr/local/include/TU/Array++.h /usr/local/include/TU/range.h \
+	/usr/local/include/TU/iterator.h /usr/local/include/TU/tuple.h \
+	/usr/local/include/TU/type_traits.h /usr/local/include/TU/algorithm.h \
+	/usr/local/include/TU/v/Widget-Xaw.h \
+	/usr/local/include/TU/v/Colormap.h /usr/local/include/TU/Image++.h \
+	/usr/local/include/TU/pair.h /usr/local/include/TU/Manip.h \
+	/usr/local/include/TU/Camera++.h
+calibCamerasWithPlanes.o: MarkerDetector.h /usr/local/include/TU/Image++.h \
+	/usr/local/include/TU/pair.h /usr/local/include/TU/type_traits.h \
+	/usr/local/include/TU/Manip.h /usr/local/include/TU/Camera++.h \
+	/usr/local/include/TU/Geometry++.h /usr/local/include/TU/Minimize.h \
+	/usr/local/include/TU/Vector++.h /usr/local/include/TU/Array++.h \
+	/usr/local/include/TU/range.h /usr/local/include/TU/iterator.h \
+	/usr/local/include/TU/tuple.h /usr/local/include/TU/algorithm.h \
 	ProjectiveMappingWithDistortion.h
-createCaptureCmds.o: calibCameras.h /Users/ueshiba/include/TU/v/TUv++.h \
-	/Users/ueshiba/include/TU/v/Colormap.h \
-	/Users/ueshiba/include/TU/Image++.h \
-	/Users/ueshiba/include/TU/Geometry++.h \
-	/Users/ueshiba/include/TU/utility.h \
-	/Users/ueshiba/include/TU/Minimize++.h \
-	/Users/ueshiba/include/TU/Vector++.h \
-	/Users/ueshiba/include/TU/Array++.h /Users/ueshiba/include/TU/types.h \
-	/Users/ueshiba/include/TU/List++.h \
-	/Users/ueshiba/include/TU/v/Widget-Xaw.h \
-	/Users/ueshiba/include/TU/Ieee1394++.h
-createFeatureCmds.o: calibCameras.h /Users/ueshiba/include/TU/v/TUv++.h \
-	/Users/ueshiba/include/TU/v/Colormap.h \
-	/Users/ueshiba/include/TU/Image++.h \
-	/Users/ueshiba/include/TU/Geometry++.h \
-	/Users/ueshiba/include/TU/utility.h \
-	/Users/ueshiba/include/TU/Minimize++.h \
-	/Users/ueshiba/include/TU/Vector++.h \
-	/Users/ueshiba/include/TU/Array++.h /Users/ueshiba/include/TU/types.h \
-	/Users/ueshiba/include/TU/List++.h \
-	/Users/ueshiba/include/TU/v/Widget-Xaw.h \
-	/Users/ueshiba/include/TU/Ieee1394++.h
-createMenuCmds.o: calibCameras.h /Users/ueshiba/include/TU/v/TUv++.h \
-	/Users/ueshiba/include/TU/v/Colormap.h \
-	/Users/ueshiba/include/TU/Image++.h \
-	/Users/ueshiba/include/TU/Geometry++.h \
-	/Users/ueshiba/include/TU/utility.h \
-	/Users/ueshiba/include/TU/Minimize++.h \
-	/Users/ueshiba/include/TU/Vector++.h \
-	/Users/ueshiba/include/TU/Array++.h /Users/ueshiba/include/TU/types.h \
-	/Users/ueshiba/include/TU/List++.h \
-	/Users/ueshiba/include/TU/v/Widget-Xaw.h \
-	/Users/ueshiba/include/TU/Ieee1394++.h
-debug.o: debug.h /Users/ueshiba/include/TU/Image++.h \
-	/Users/ueshiba/include/TU/Geometry++.h \
-	/Users/ueshiba/include/TU/utility.h \
-	/Users/ueshiba/include/TU/Minimize++.h \
-	/Users/ueshiba/include/TU/Vector++.h \
-	/Users/ueshiba/include/TU/Array++.h /Users/ueshiba/include/TU/types.h \
-	/Users/ueshiba/include/TU/Image++.cc \
-	/Users/ueshiba/include/TU/mmInstructions.h
-main.o: MyCmdWindow.h /Users/ueshiba/include/TU/v/App.h \
-	/Users/ueshiba/include/TU/v/TUv++.h \
-	/Users/ueshiba/include/TU/v/Colormap.h \
-	/Users/ueshiba/include/TU/Image++.h \
-	/Users/ueshiba/include/TU/Geometry++.h \
-	/Users/ueshiba/include/TU/utility.h \
-	/Users/ueshiba/include/TU/Minimize++.h \
-	/Users/ueshiba/include/TU/Vector++.h \
-	/Users/ueshiba/include/TU/Array++.h /Users/ueshiba/include/TU/types.h \
-	/Users/ueshiba/include/TU/List++.h \
-	/Users/ueshiba/include/TU/v/Widget-Xaw.h \
-	/Users/ueshiba/include/TU/v/CmdWindow.h \
-	/Users/ueshiba/include/TU/v/CmdPane.h \
-	/Users/ueshiba/include/TU/v/FileSelection.h \
-	/Users/ueshiba/include/TU/v/ModalDialog.h \
-	/Users/ueshiba/include/TU/v/Dialog.h \
-	/Users/ueshiba/include/TU/v/Timer.h MyCanvasPaneTerse.h \
-	MyCanvasPane.h /Users/ueshiba/include/TU/v/CanvasPane.h \
-	/Users/ueshiba/include/TU/v/CanvasPaneDC.h \
-	/Users/ueshiba/include/TU/v/XDC.h /Users/ueshiba/include/TU/v/DC.h \
-	/Users/ueshiba/include/TU/Manip.h /Users/ueshiba/include/TU/v/Menu.h \
-	/Users/ueshiba/include/TU/v/ShmDC.h MarkerDetector.h \
-	ProjectiveMappingWithDistortion.h calibCameras.h \
-	/Users/ueshiba/include/TU/Ieee1394++.h
-refineCalibration.o: /Users/ueshiba/include/TU/Minimize++.h \
-	/Users/ueshiba/include/TU/Vector++.h \
-	/Users/ueshiba/include/TU/Array++.h /Users/ueshiba/include/TU/types.h \
-	/Users/ueshiba/include/TU/BlockMatrix++.h MarkerDetector.h \
-	/Users/ueshiba/include/TU/Image++.h \
-	/Users/ueshiba/include/TU/Geometry++.h \
-	/Users/ueshiba/include/TU/utility.h ProjectiveMappingWithDistortion.h
+createCaptureCmds.o: calibCameras.h /usr/local/include/TU/v/TUv++.h \
+	/usr/local/include/TU/List.h /usr/local/include/TU/Geometry++.h \
+	/usr/local/include/TU/Minimize.h /usr/local/include/TU/Vector++.h \
+	/usr/local/include/TU/Array++.h /usr/local/include/TU/range.h \
+	/usr/local/include/TU/iterator.h /usr/local/include/TU/tuple.h \
+	/usr/local/include/TU/type_traits.h /usr/local/include/TU/algorithm.h \
+	/usr/local/include/TU/v/Widget-Xaw.h
+createFeatureCmds.o: calibCameras.h /usr/local/include/TU/v/TUv++.h \
+	/usr/local/include/TU/List.h /usr/local/include/TU/Geometry++.h \
+	/usr/local/include/TU/Minimize.h /usr/local/include/TU/Vector++.h \
+	/usr/local/include/TU/Array++.h /usr/local/include/TU/range.h \
+	/usr/local/include/TU/iterator.h /usr/local/include/TU/tuple.h \
+	/usr/local/include/TU/type_traits.h /usr/local/include/TU/algorithm.h \
+	/usr/local/include/TU/v/Widget-Xaw.h
+createMenuCmds.o: calibCameras.h /usr/local/include/TU/v/TUv++.h \
+	/usr/local/include/TU/List.h /usr/local/include/TU/Geometry++.h \
+	/usr/local/include/TU/Minimize.h /usr/local/include/TU/Vector++.h \
+	/usr/local/include/TU/Array++.h /usr/local/include/TU/range.h \
+	/usr/local/include/TU/iterator.h /usr/local/include/TU/tuple.h \
+	/usr/local/include/TU/type_traits.h /usr/local/include/TU/algorithm.h \
+	/usr/local/include/TU/v/Widget-Xaw.h
+debug.o: debug.h /usr/local/include/TU/Image++.h \
+	/usr/local/include/TU/pair.h /usr/local/include/TU/type_traits.h \
+	/usr/local/include/TU/Manip.h /usr/local/include/TU/Camera++.h \
+	/usr/local/include/TU/Geometry++.h /usr/local/include/TU/Minimize.h \
+	/usr/local/include/TU/Vector++.h /usr/local/include/TU/Array++.h \
+	/usr/local/include/TU/range.h /usr/local/include/TU/iterator.h \
+	/usr/local/include/TU/tuple.h /usr/local/include/TU/algorithm.h
+main.o: MyCmdWindow.h /usr/local/include/TU/v/App.h \
+	/usr/local/include/TU/v/TUv++.h /usr/local/include/TU/List.h \
+	/usr/local/include/TU/Geometry++.h /usr/local/include/TU/Minimize.h \
+	/usr/local/include/TU/Vector++.h /usr/local/include/TU/Array++.h \
+	/usr/local/include/TU/range.h /usr/local/include/TU/iterator.h \
+	/usr/local/include/TU/tuple.h /usr/local/include/TU/type_traits.h \
+	/usr/local/include/TU/algorithm.h \
+	/usr/local/include/TU/v/Widget-Xaw.h \
+	/usr/local/include/TU/v/Colormap.h /usr/local/include/TU/Image++.h \
+	/usr/local/include/TU/pair.h /usr/local/include/TU/Manip.h \
+	/usr/local/include/TU/Camera++.h /usr/local/include/TU/v/CmdWindow.h \
+	/usr/local/include/TU/v/CmdPane.h \
+	/usr/local/include/TU/v/FileSelection.h \
+	/usr/local/include/TU/v/ModalDialog.h \
+	/usr/local/include/TU/v/Dialog.h /usr/local/include/TU/v/Timer.h \
+	MyCanvasPaneTerse.h MyCanvasPane.h \
+	/usr/local/include/TU/v/CanvasPane.h \
+	/usr/local/include/TU/v/CanvasPaneDC.h /usr/local/include/TU/v/XDC.h \
+	/usr/local/include/TU/v/DC.h /usr/local/include/TU/v/Menu.h \
+	/usr/local/include/TU/v/ShmDC.h MarkerDetector.h \
+	ProjectiveMappingWithDistortion.h calibCameras.h
+refineCalibration.o: MarkerDetector.h /usr/local/include/TU/Image++.h \
+	/usr/local/include/TU/pair.h /usr/local/include/TU/type_traits.h \
+	/usr/local/include/TU/Manip.h /usr/local/include/TU/Camera++.h \
+	/usr/local/include/TU/Geometry++.h /usr/local/include/TU/Minimize.h \
+	/usr/local/include/TU/Vector++.h /usr/local/include/TU/Array++.h \
+	/usr/local/include/TU/range.h /usr/local/include/TU/iterator.h \
+	/usr/local/include/TU/tuple.h /usr/local/include/TU/algorithm.h \
+	ProjectiveMappingWithDistortion.h
